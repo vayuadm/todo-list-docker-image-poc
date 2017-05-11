@@ -5,7 +5,7 @@ machine:
   services:
     - docker
   environment:
-    IMAGE_NAME: vayuadm/vayu-poc-todo-list-deployment
+    IMAGE_NAME: vayuio/vayu-poc-todo-list
 dependencies:
   override:
     - docker build -t $IMAGE_NAME .
