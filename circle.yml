@@ -8,6 +8,7 @@ machine:
     IMAGE_NAME: vayuio/vayu-poc-todo-list
     KUBERNETES_NAMESPACE: default
     KUBERNETES_DEPLOYMENT: poc-deployment
+    GIT_BRANCH: master 
 dependencies:
   override:
     - docker build -t $IMAGE_NAME .
@@ -18,7 +19,7 @@ deployment:
     branch: master
     commands:
       # tag image with CircleCI build number
-      - docker tag $IMAGE_NAME $IMAGE_NAME:$IMAGE_NAME--$KUBERNETES_NAMESPACE--$KUBERNETES_DEPLOYMENT--$CIRCLE_BUILD_NUM
+      - docker tag $IMAGE_NAME $IMAGE_NAME:$GIT_BRANCH--$KUBERNETES_NAMESPACE--$KUBERNETES_DEPLOYMENT--$CIRCLE_BUILD_NUM
       # deploy image to DockerHub
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push $IMAGE_NAME
