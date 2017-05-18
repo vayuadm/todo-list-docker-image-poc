@@ -5,7 +5,7 @@ machine:
   services:
     - docker
   environment:
-    IMAGE_NAME: vayuio/vayu-poc-todo-list
+    IMAGE_NAME: vayuadm/vayu-poc-todo-list
     KUBERNETES_NAMESPACE: default
     KUBERNETES_DEPLOYMENT: poc-deployment
     GIT_BRANCH: master 
