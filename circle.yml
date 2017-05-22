@@ -19,7 +19,9 @@ deployment:
     branch: master
     commands:
       # tag image with kube-distribution tag format
-      - docker tag $IMAGE_NAME $IMAGE_NAME:$CIRCLE_BUILD_NUM $IMAGE_NAME:$GIT_BRANCH--$KUBERNETES_NAMESPACE--$KUBERNETES_DEPLOYMENT--$CIRCLE_BUILD_NUM
+      - docker tag $IMAGE_NAME:$CIRCLE_BUILD_NUM $IMAGE_NAME:$GIT_BRANCH--$KUBERNETES_NAMESPACE--$KUBERNETES_DEPLOYMENT--$CIRCLE_BUILD_NUM
       # deploy image to DockerHub
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push $IMAGE_NAME
+      - docker tag $IMAGE_NAME $IMAGE_NAME:$CIRCLE_BUILD_NUM
       - docker push $IMAGE_NAME
