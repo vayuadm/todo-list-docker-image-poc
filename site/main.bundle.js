@@ -510,7 +510,7 @@ module.exports = module.exports.toString();
 /***/ 465:
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"todoapp\">\n  <ob-todo-list-header [title]=\"'My todo-list'\" [inputPlaceholder]=\"'What has to be done?'\"\n                       (newItemEvent)=\"handleNewItem($event)\"></ob-todo-list-header>\n\n  <section class=\"main\" (deleteItemEvent)=\"handleDeleteItem($event)\">\n    <ob-todo-list-todo-list [items]=\"_todoService.items\"></ob-todo-list-todo-list>\n  </section>\n</section>\n"
+module.exports = "<section class=\"todoapp\">\n  <ob-todo-list-header [title]=\"'My todo-list'\" [inputPlaceholder]=\"'Whats next?'\"\n                       (newItemEvent)=\"handleNewItem($event)\"></ob-todo-list-header>\n\n  <section class=\"main\" (deleteItemEvent)=\"handleDeleteItem($event)\">\n    <ob-todo-list-todo-list [items]=\"_todoService.items\"></ob-todo-list-todo-list>\n  </section>\n</section>\n"
 
 /***/ }),
 
