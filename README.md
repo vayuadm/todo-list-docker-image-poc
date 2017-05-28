@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/vayuadm/todo-list-docker-image-poc.svg?style=svg)](https://circleci.com/gh/vayuadm/todo-list-docker-image-poc)
+
 # todo-list-docker-image-poc
 
 ## build:
